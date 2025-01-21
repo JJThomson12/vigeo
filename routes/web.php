@@ -5,7 +5,7 @@ use App\Http\Controllers\smpController;
 use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
-    return view('home', ['title' => 'ViGeo | Manajemen Data SMP Payakumbuh']);
+    return view('index', ['title' => 'ViGeo | Manajemen Data SMP Payakumbuh']);
 });
 
 Route::get('/crud', function () {
@@ -19,7 +19,7 @@ Route::resource('smp', smpController::class)->except(['index']);
 Route::get('/api/smp', [smpController::class, 'getSmpData']);
 
 Route::get('/', function () {
-    return view('home', ['title' => 'ViGeo | Manajemen Data SMP Payakumbuh']);
+    return view('index', ['title' => 'ViGeo | Manajemen Data SMP Payakumbuh']);
 });
 
 // Authentication routes
